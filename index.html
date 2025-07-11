@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Control Network - Consultores Empresariales</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #092640 0%, #004AAD 50%, #0066FF 100%);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(9, 38, 64, 0.2);
+        }
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #004AAD;
+            transition: width .3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 25px rgba(30, 58, 138, 0.15);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="bg-[#004AAD] text-white p-2 rounded-lg mr-3">
+                    <i class="fas fa-calculator text-2xl"></i>
+                </div>
+                <h1 class="text-xl md:text-2xl font-bold text-blue-900">
+                    <span class="text-blue-600">Tax Control</span> Network
+                </h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#inicio" class="nav-link text-[#092640] font-medium">Inicio</a>
+                <a href="#servicios" class="nav-link text-[#092640] font-medium">Servicios</a>
+                <a href="#nosotros" class="nav-link text-[#092640] font-medium">Nosotros</a>
+                <a href="#clientes" class="nav-link text-[#092640] font-medium">Clientes</a>
+                <a href="#contacto" class="nav-link text-[#092640] font-medium">Contacto</a>
+            </nav>
+            
+            <button class="md:hidden text-blue-900" id="menu-toggle">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
+            <a href="#inicio" class="block py-2 text-blue-900 font-medium">Inicio</a>
+            <a href="#servicios" class="block py-2 text-blue-900 font-medium">Servicios</a>
+            <a href="#nosotros" class="block py-2 text-blue-900 font-medium">Nosotros</a>
+            <a href="#clientes" class="block py-2 text-blue-900 font-medium">Clientes</a>
+            <a href="#contacto" class="block py-2 text-blue-900 font-medium">Contacto</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-gradient text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Expertos en Gestion y Auditoria Tributaria</h2>
+                <p class="text-xl mb-8 opacity-90">Optimizamos tus procesos contables y fiscales para maximizar tu rentabilidad y cumplimiento regulatorio.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contacto" class="bg-white text-[#004AAD] font-bold py-3 px-6 rounded-lg text-center hover:bg-gray-100 transition duration-300">
+                        Contáctanos <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#servicios" class="border-2 border-white text-white font-bold py-3 px-6 rounded-lg text-center hover:bg-white hover:text-[#004AAD] transition duration-300">
+                        Nuestros Servicios
+                    </a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                     alt="Equipo de consultores financieros" 
+                     class="rounded-xl shadow-2xl max-w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Nuestros Servicios Especializados</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Ofrecemos soluciones integrales para la gestión financiera y tributaria de su empresa, adaptadas a sus necesidades específicas.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-600 transition duration-300">
+                    <div class="bg-blue-50 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-file-invoice-dollar text-[#004AAD] text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-[#092640] mb-3">Contabilidad Corporativa</h3>
+                    <p class="text-gray-600 mb-4">Gestión integral de procesos contables con tecnología de punta y reportes personalizados para la toma de decisiones.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-[#004AAD] mr-2"></i> Estados financieros</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Conciliaciones bancarias</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Contabilidad electrónica</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-600 transition duration-300">
+                    <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-search-dollar text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Auditoría Financiera</h3>
+                    <p class="text-gray-600 mb-4">Exámenes independientes para validar la integridad de su información financiera y cumplimiento normativo.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Auditorías externas</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Auditorías internas</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Due diligence</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-600 transition duration-300">
+                    <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-landmark text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Consultoría Fiscal</h3>
+                    <p class="text-gray-600 mb-4">Estrategias fiscales personalizadas para optimizar cargas tributarias y garantizar el cumplimiento legal.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Planeación fiscal</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Cumplimiento SAT</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Defensa fiscal</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-600 transition duration-300">
+                    <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-hand-holding-usd text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Nóminas y Prestaciones</h3>
+                    <p class="text-gray-600 mb-4">Administración integral de recursos humanos con enfoque en cumplimiento laboral y optimización de costos.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Cálculo de nómina</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> IMSS e INFONAVIT</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Prestaciones sociales</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-600 transition duration-300">
+                    <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Análisis Financiero</h3>
+                    <p class="text-gray-600 mb-4">Diagnósticos estratégicos para mejorar la rentabilidad, liquidez y posición financiera de su organización.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Proyecciones financieras</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Análisis de ratios</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Modelos de negocio</li>
+                    </ul>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-white rounded-xl shadow-lg p-6 border-l-4 border-blue-600 transition duration-300">
+                    <div class="bg-blue-100 w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-laptop-code text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-blue-900 mb-3">Sistemas Contables</h3>
+                    <p class="text-gray-600 mb-4">Implementación de software especializado para automatizar procesos y mejorar la eficiencia operativa.</p>
+                    <ul class="text-gray-600 space-y-2">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> ERP contables</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Facturación electrónica</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-blue-500 mr-2"></i> Business Intelligence</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="nosotros" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                         alt="Equipo de Tax Control Network" 
+                         class="rounded-xl shadow-lg w-full">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-[#092640] mb-6">Nuestra Experiencia y Compromiso</h2>
+                    <div class="w-20 h-1 bg-[#004AAD] mb-6"></div>
+                    <p class="text-gray-600 mb-6">Fundada en 2010, <span class="font-semibold text-[#004AAD]">Tax Control Network</span> se ha consolidado como líder en consultoría empresarial, brindando soluciones integrales a más de 500 clientes en diversos sectores industriales.</p>
+                    
+                    <div class="mb-8">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-bullseye text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-900 mb-1">Misión</h4>
+                                <p class="text-gray-600">Proporcionar servicios contables y fiscales de excelencia, mediante soluciones personalizadas que generen valor a nuestros clientes y contribuyan al crecimiento sostenible de sus negocios.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-eye text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-900 mb-1">Visión</h4>
+                                <p class="text-gray-600">Ser reconocidos como la firma de consultoría empresarial más confiable e innovadora de la región, destacando por nuestra integridad, conocimiento técnico y compromiso con los resultados.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                            <div class="text-3xl font-bold text-[#004AAD] mb-2">15+</div>
+                            <div class="text-gray-600 font-medium">Años de experiencia</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                            <div class="text-3xl font-bold text-blue-600 mb-2">500+</div>
+                            <div class="text-gray-600 font-medium">Clientes satisfechos</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                            <div class="text-3xl font-bold text-blue-600 mb-2">40+</div>
+                            <div class="text-gray-600 font-medium">Profesionales</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm text-center">
+                            <div class="text-3xl font-bold text-blue-600 mb-2">12</div>
+                            <div class="text-gray-600 font-medium">Premios obtenidos</div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contacto" class="inline-block bg-[#004AAD] hover:bg-[#00388A] text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                        Conoce más sobre nosotros
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients/Testimonials Section -->
+    <section id="clientes" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Nuestros Clientes Opinan</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">La satisfacción de nuestros clientes es nuestro mayor logro. Conoce lo que dicen sobre nuestros servicios.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-gray-50 rounded-xl p-6 shadow-sm border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-[#004AAD] flex items-center justify-center text-white font-bold mr-4">AM</div>
+                        <div>
+                            <h4 class="font-bold text-[#092640]">Ana Martínez</h4>
+                            <p class="text-gray-500 text-sm">CEO, Retail Solutions</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Tax Control Network transformó completamente nuestro departamento financiero. Su expertise en consultoría fiscal nos ha permitido ahorrar más del 20% en impuestos anuales."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-gray-50 rounded-xl p-6 shadow-sm border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold mr-4">JR</div>
+                        <div>
+                            <h4 class="font-bold text-blue-900">José Ramírez</h4>
+                            <p class="text-gray-500 text-sm">Director Financiero, Grupo Industrial</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"La auditoría realizada por su equipo fue impecable. Identificaron áreas de oportunidad que no habíamos considerado y nos brindaron soluciones prácticas para mejorar nuestros controles internos."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-gray-50 rounded-xl p-6 shadow-sm border border-gray-200">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full bg-blue-600 flex items-center justify-center text-white font-bold mr-4">LG</div>
+                        <div>
+                            <h4 class="font-bold text-blue-900">Laura González</h4>
+                            <p class="text-gray-500 text-sm">Gerente General, Startup Tech</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-4">"Como startup, necesitábamos asesoría contable que entendiera nuestro modelo de negocio. El equipo de Tax Control Network ha sido fundamental en nuestro crecimiento, brindándonos soluciones escalables."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="py-16 bg-[#092640] text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Contáctanos</h2>
+                <div class="w-20 h-1 bg-[#004AAD] mx-auto mb-6"></div>
+                <p class="max-w-2xl mx-auto opacity-90">Estamos listos para ayudarte. Completa el formulario y uno de nuestros consultores se pondrá en contacto contigo en menos de 24 horas.</p>
+            </div>
+            <div>
+    <a href="https://wa.link/ifhnq0" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 flex items-center justify-center">
+        <i class="fab fa-whatsapp mr-2"></i> Contactar por WhatsApp
+    </a>
+</div>
+
+                
+                <div class="lg:w-1/2 lg:pl-10">
+                    <div class="bg-[#1A365D] rounded-xl p-8 h-full">
+                        <h3 class="text-2xl font-bold mb-6">Información de Contacto</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-[#004AAD] p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Oficinas Centrales</h4>
+                                    <p class="opacity-90">Av.Prolongacion Beni 8vo Anillo<br>Calle Tajibo 215</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-700 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Teléfonos</h4>
+                                    <p class="opacity-90">+591 76327651
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-700 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Correo Electrónico</h4>
+                                    <p class="opacity-90">taxcontrol.ct@gmail.com<br>waldovillegasm@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-700 p-3 rounded-full mr-4">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Horario de Atención</h4>
+                                    <p class="opacity-90">Lunes a Viernes: 9:00 - 18:00 hrs<br>Sábados: 9:00 - 14:00 hrs</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold mb-4">Síguenos en redes sociales</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://www.facebook.com/taxcontrolnetwork" target="_blank" rel="noopener noreferrer"
+                                 class="bg-[#004AAD] hover:bg-[#00388A] w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://www.instagram.com/taxcontrolnetwork/" target="_blank" rel="noopener noreferrer" 
+                                 class="bg-blue-700 hover:bg-blue-600 w-10 h-10 rounded-full flex items-center justify-center transition duration-300">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#092640] text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-[#004AAD] text-white p-2 rounded-lg mr-3">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">
+                            <span class="text-[#4D9EFF]">Tax Control</span> Network
+                        </h3>
+                    </div>
+                    <p class="opacity-80">Consultores empresariales especializados en soluciones contables, fiscales y de auditoría para empresas de todos los tamaños.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Servicios</h4>
+                    <ul class="space-y-2 opacity-80">
+                        <li><a href="#" class="hover:text-blue-300 transition duration-300">Contabilidad</a></li>
+                        <li><a href="#" class="hover:text-blue-300 transition duration-300">Auditoría</a></li>
+                        <li><a href="#" class="hover:text-blue-300 transition duration-300">Consultoría Fiscal</a></li>
+                        <li><a href="#" class="hover:text-blue-300 transition duration-300">Nóminas</a></li>
+                        <li><a href="#" class="hover:text-blue-300 transition duration-300">Análisis Financiero</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 opacity-80">
+                        <li><a href="#inicio" class="hover:text-blue-300 transition duration-300">Inicio</a></li>
+                        <li><a href="#nosotros" class="hover:text-blue-300 transition duration-300">Nosotros</a></li>
+                        <li><a href="#servicios" class="hover:text-blue-300 transition duration-300">Servicios</a></li>
+                        <li><a href="#clientes" class="hover:text-blue-300 transition duration-300">Clientes</a></li>
+                        <li><a href="#contacto" class="hover:text-blue-300 transition duration-300">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Newsletter</h4>
+                    <p class="opacity-80 mb-4">Suscríbete para recibir actualizaciones y consejos financieros.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Tu correo" class="px-4 py-2 rounded-l-lg text-gray-800 w-full focus:outline-none">
+                        <button class="bg-blue-600 hover:bg-blue-500 px-4 py-2 rounded-r-lg transition duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-8 border-t border-[#004AAD] flex flex-col md:flex-row justify-between items-center">
+                <p class="opacity-80 mb-4 md:mb-0">© 2023 Tax Control Network. Todos los derechos reservados a InnovaComp.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="opacity-80 hover:opacity-100 transition duration-300">Términos y Condiciones</a>
+                    <a href="#" class="opacity-80 hover:opacity-100 transition duration-300">Política de Privacidad</a>
+                    <a href="#" class="opacity-80 hover:opacity-100 transition duration-300">Aviso Legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 bg-[#004AAD] text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
